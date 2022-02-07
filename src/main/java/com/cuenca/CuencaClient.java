@@ -35,7 +35,7 @@ public class CuencaClient {
         return request("GET", endpoint, body);
     }
 
-    public HttpResponse<String> get(String endpoint, Integer bodyNumberTwo) throws Except$
+    public HttpResponse<String> get(String endpoint, Integer bodyNumberTwo) throws Exception{
         return request("GET", endpoint, "");
     }
 
