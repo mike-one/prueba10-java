@@ -165,6 +165,6 @@ class CuencaClientTest {
         when(httpClient.send(request,HttpResponse.BodyHandlers.ofString())).thenReturn(response);
         CuencaClient client = new CuencaClient(API_KEY,API_SECRET, httpClient);
         var response = client.delete(endPoint, boody);
-        Assertions.assertEquals(response.statusCode(),200);
+        Assertions.assertEquals(response.statusCode(),201);
     }
 }
