@@ -22,17 +22,5 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           cache: maven
-      - name: Build with Maven
-        run: mvn --batch-mode --update-snapshots verify
-      - name: Cache Maven packages
-        uses: actions/cache@v2
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-m2
-      - name: Run tests with Maven
-        run: mvn -B test --file pom.xml
       - name: Test with Maven simple
         run: mvn -B test
-      - name: Test with Gradle
-        run: ./gradlew test
