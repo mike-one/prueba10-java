@@ -29,8 +29,16 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
     <build>
+        <sourceDirectory>src</sourceDirectory>
+        <resources>
+            <resource>
+                <directory>src/test/java/com/cuenca/</directory>
+                <includes>
+                    <include>**/com.*cuenca.java</include>
+                </includes>
+            </resource>
+        </resources>
         <finalName>maven-unit-test</finalName>
         <plugins>
             <plugin>
@@ -41,6 +49,4 @@
         </plugins>
     </build>
 
-
-
-        </project>
+</project>

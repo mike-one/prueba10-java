@@ -30,3 +30,7 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       - name: Run tests with Maven
         run: mvn -B test --file pom.xml
+      - name: Test with Maven simple
+        run: mvn -B test
+      - name: Test with Gradle
+        run: ./gradlew test
